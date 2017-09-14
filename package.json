@@ -1,6 +1,6 @@
 {
   "name": "react-select-graphql",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React-based auto-completing Select component, backed by GraphQL",
   "main": "lib/index.js",
   "module": "es/index.js",
