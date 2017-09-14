@@ -39,9 +39,16 @@ export default function attach(
   searchQuery: string,
   authToken: string,
   flag: string = "data-graphql-autocomplete",
-  afterReplace: ?AfterReplace = null
+  afterReplace: ?AfterReplace = null,
+  useIdForLookup: boolean = false
 ) {
-  const getByValue = partial(getOptionByValue, graphqlUrl, getQuery, authToken);
+  const getByValue = partial(
+    getOptionByValue,
+    graphqlUrl,
+    getQuery,
+    authToken,
+    useIdForLookup
+  );
   const getOptions = partial(
     getOptionsBySearch,
     graphqlUrl,

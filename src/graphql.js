@@ -51,12 +51,14 @@ export async function getOptionByValue(
   url: string,
   query: string,
   authToken: string,
+  useIdForLookup: boolean,
   value: string
 ): Promise<?SelectOption> {
   if (!value) {
     return Promise.resolve(null);
   }
-  const operation = `query Get($id:String!) { ${query} }`;
+  const varType = useIdForLookup ? "ID!" : "String!";
+  const operation = `query Get($id:${varType}) { ${query} }`;
 
   const graphQLParams = {
     operationName: "Get",
