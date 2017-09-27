@@ -1,5 +1,7 @@
 # react-select-graphql
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/shauns/react-select-graphql.svg)](https://greenkeeper.io/)
+
 Use GraphQL to power auto-complete
 
 ## What is this?
