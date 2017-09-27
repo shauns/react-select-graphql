@@ -10,7 +10,7 @@ async function execute<T>(
   transform: Transformer<T>
 ): Promise<T> {
   const response = await fetch(url, {
-    method: "post",
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${authToken}`
